@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Marketplace</title>
+    <link rel="stylesheet" href="tokenMarketplace.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Token Marketplace</h1>
+        
+        
+        <div class="form-section">
+            <h2>List Token</h2>
+            <input type="text" id="tokenAddress" placeholder="Token Address">
+            <input type="number" id="listingAmount" placeholder="Amount">
+            <input type="number" id="pricePerToken" placeholder="Price Per Token">
+            <button onclick="listToken()">List Token</button>
+        </div>
+        
+        <div class="form-section">
+            <h2>Purchase Token</h2>
+            <input type="number" id="listingIndex" placeholder="Listing Index">
+            <input type="number" id="purchaseAmount" placeholder="Amount">
+            <button onclick="purchaseToken()">Purchase Token</button>
+        </div>
+        
+        <div class="form-section">
+            <h2>Get Listing Information</h2>
+            <input type="number" id="listingInfoIndex" placeholder="Listing Index">
+            <button onclick="getListing()">Get Listing</button>
+            <div id="listingInfo"></div>
+        </div>
+      
+
+        <div class="form-section">
+            <h2>Total Listings</h2>
+            <button onclick="totalListings()">Get Total Listings</button>
+            <div id="totalListings"></div>
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.1/dist/web3.min.js"></script>
+    <script src="tokenMarketplace.js"></script>
+</body>
+</html>

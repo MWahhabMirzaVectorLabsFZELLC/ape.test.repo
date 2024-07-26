@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Factory</title>
+    <link rel="stylesheet" href="tokenFactory.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Token Factory</h1>
+        
+        <div class="form-section">
+            <h2>Set Marketplace Address</h2>
+            <input type="text" id="marketplaceAddress" placeholder="Marketplace Address">
+            <button onclick="setMarketplaceAddress()">Set Address</button>
+        </div>
+        
+        <div class="form-section">
+            <h2>Create Token</h2>
+            <input type="text" id="tokenName" placeholder="Token Name">
+            <input type="text" id="tokenSymbol" placeholder="Token Symbol">
+            <input type="number" id="initialSupply" placeholder="Initial Supply">
+            <input type="number" id="listingAmount" placeholder="Listing Amount">
+            <input type="number" id="pricePerToken" placeholder="Price Per Token">
+            <button onclick="createToken()">Create Token</button>
+        </div>
+        
+        <div class="form-section">
+            <h2>List Existing Token</h2>
+            <input type="text" id="existingTokenAddress" placeholder="Token Address">
+            <input type="number" id="existingListingAmount" placeholder="Listing Amount">
+            <input type="number" id="existingPricePerToken" placeholder="Price Per Token">
+            <button onclick="listExistingToken()">List Token</button>
+        </div>
+        
+        <div class="form-section">
+            <h2>Get Token Information</h2>
+            <input type="number" id="tokenIndex" placeholder="Token Index">
+            <button onclick="getToken()">Get Token Info</button>
+            <div id="tokenInfo"></div>
+        </div>
+        
+        <div class="form-section">
+            <h2>Total Tokens</h2>
+            <button onclick="totalTokens()">Get Total Tokens</button>
+            <div id="totalTokens"></div>
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.1/dist/web3.min.js"></script>
+    <script src="tokenFactory.js"></script>
+</body>
+</html>
